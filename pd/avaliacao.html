@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 5 Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+        .card {
+            padding: 10px;
+            background-color: rgb(241, 241, 241);
+            box-shadow: 1px 1px 5px rgb(199, 199, 199);
+            border: rgb(235, 235, 235) 1px solid;
+            border-radius: 10px;
+            line-height: 1.2;
+            z-index: -1;
+        }
+
+        .titulo {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .destaque {
+            color: red;
+        }
+
+        .zoom {
+            animation: zoom-in-zoom-out 1s ease infinite;
+        }
+
+        @keyframes zoom-in-zoom-out {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            50% {
+                transform: scale(1.1, 1.1);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        .b1 {
+            background-color: red;
+            border: 1px rgb(145, 0, 0);
+        }
+
+        .b2 {
+            background-color: rgb(255, 81, 0);
+            border: 1px rgb(114, 36, 0);
+        }
+
+        .b3 {
+            background-color: rgb(255, 187, 0);
+            border: 1px rgb(126, 92, 0);
+        }
+
+        .b4 {
+            background-color: rgb(157, 255, 0);
+            border: 1px rgb(75, 122, 0);
+        }
+
+        .b5 {
+            background-color: rgb(0, 211, 11);
+            border: 1px rgb(0, 87, 4);
+        }
+
+        button {
+            border: 1px white solid;
+        }
+
+        .numero {
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .progress {
+            height: 15px;
+            background-color: #777;
+            position: relative;
+        }
+
+        .progress .progress-bar {
+            position: absolute;
+            height: 100%;
+            background-color: #add555;
+            animation: progress-animation 4s linear forwards;
+        }
+
+
+        @keyframes progress-animation {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%
+            }
+        }
+
+        .green {
+            color: rgb(0, 151, 0);
+        }
+
+        .menu-saldo {
+            margin-top: -40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgb(160, 160, 160);
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .saldo {
+            color: green;
+        }
+
+        .esconder {
+  opacity: 0;
+ 
+}
+.mostrar{
+    animation: mostrar1 2s forwards;
+}
+@keyframes mostrar1 {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <img src="11424482.png" alt="" class="img-fluid col-12 col-sm-4 offset-sm-4">
+    </div><br>
+
+
+    <div class="card col-10 offset-1 col-sm-4 offset-sm-4">
+        <span class="titulo text-center col-10 offset-1"><i class="fa fa-usd" aria-hidden="true"></i> ENVIANDO SUA
+            AVALIAÇÃO</span>
+
+        <br><br>
+        <div class="col-10 offset-1 bg-black text-center p-2 numero">
+            <span class="texto-simples text-center"> <span id="valor"></span></span>
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <br><br><br>
+        <section id="esconder1" class="esconder text-center">
+            <span class=" titulo text-center col-10 "><i class="fa fa-arrow-circle-up green"
+                    aria-hidden="true"></i> SEU SALDO SUBIU</span>
+            <br><br><br>
+        </section>
+            </a>
+    </div>
+    <section id="esconder2" class="esconder">
+    <div class=" container-fluid col-8 col-sm-4 offset-2  offset-sm-4 menu-saldo pt-4 pl-4">
+        <div class="row">
+            <div class="col-3 offset-1">
+                <img src="4.png" alt="" class="img-fluid col-10">
+            </div>
+            <div class="col-6">
+                <span class="saldo" id="saldo2">R$60,00</span>
+            </div>
+        </div>
+        <br>
+    </div>
+</section>
+    <br><br>
+    <section id="esconder3" class="esconder">
+    <div class=" col-8 offset-2 text-center">
+        <span class=" texto-simples text-center col-10 offset-1">PARABÉNS! <BR> Para Cadastrar sua chave pix e realizar
+            seu saque, <b>assista um vídeo de 2 mínutos</b></span>
+    </div><br><br>
+</section>
+<section id="esconder4" class="esconder">
+    <div class="  text-center">
+        <a href="https://www.google.cm/">
+            <img src="assistir.png" alt="" class="img-fluid zoom text-center">
+            </a>
+    </div>
+    <br><br><br>
+</section>
+    <script src="ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+
+
+
+        setTimeout(function () {
+
+
+            var botao1 = document.getElementById('esconder1');
+            botao1.classList.add('mostrar');
+            botao1.classList.remove('esconder');
+                setTimeout(function () {
+                var botao2 = document.getElementById('esconder2');
+                botao2.classList.add('mostrar');
+                botao2.classList.remove('esconder');
+                    setTimeout(function () {
+                    var botao3 = document.getElementById('esconder3');
+                    botao3.classList.add('mostrar');
+                    botao3.classList.remove('esconder');
+                    var botao4 = document.getElementById('esconder4');
+                    botao4.classList.add('mostrar');
+                    botao4.classList.remove('esconder');
+                    }, 1500);
+                }, 200);
+        }, 5000);
+
+
+
+
+
+
+
+        const start = 0;
+        const end = 100;
+        const duration = 5000; // duração em milissegundos
+        const interval = Math.ceil((end - start) / duration); // arredonda para cima para obter números inteiros
+
+        let currentValue = start;
+        const startTime = new Date().getTime();
+
+        const loop = () => {
+            document.getElementById('valor').innerText = currentValue; // atualiza o campo com o valor atual
+            currentValue += interval;
+
+            const elapsed = new Date().getTime() - startTime;
+            const remainingTime = Math.max(0, duration - elapsed);
+            const delay = remainingTime > 0 ? Math.ceil((remainingTime / (end - start)) * interval) : 0;
+
+            if (currentValue <= end) {
+                setTimeout(loop, delay);
+            }
+        };
+
+        window.onload = loop; // chama a função loop quando a página carrega
+    </script>
+</body>
+
+</html>
